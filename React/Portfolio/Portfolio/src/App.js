@@ -7,6 +7,7 @@ import "./App.css";
 
 import About from './components/About';
 import Contact from "./components/Contact";
+import Portfolio from "./components/Portfolio";
 import { useState } from "react";
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
       return <About />
     } else if (currentPage == "Contact") {
       return <Contact />
+    } else if (currentPage == "Portfolio") {
+      return <Portfolio />
     }
   }
 
@@ -27,12 +30,15 @@ function App() {
     <div>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Ronald</Navbar.Brand>
+          <Navbar.Brand href="#home">Ronald Chen</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#" onClick={() => {
               setCurrentPage("About")
             }}>About Me</Nav.Link>
-            <Nav.Link href="#">Portfolio</Nav.Link>
+
+            <Nav.Link href="#" onClick={() => {
+              setCurrentPage("Portfolio")
+             }}> Portfolio</Nav.Link>
             <Nav.Link href="#" onClick={() => {
               setCurrentPage("Contact")
             }}>Contact</Nav.Link>
@@ -47,9 +53,12 @@ function App() {
       <footer class="bg-dark text-center text-white">
         <div class="container p-4">
           <section class="mb-4 d-flex justify-content-around">
-            <p>Link to Github</p>
-            <p>Contact Number</p>
-            <p>Email address</p>
+         
+            <p>Link to Github https://github.com/rc9525</p>
+            <p>Contact Number 123-456-7895</p>
+            <p>Email address  123@gmail.com</p>
+        
+         
           </section>
         </div>
       </footer>
